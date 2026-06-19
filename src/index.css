@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  /* Plain, sober buttons — no glow, no gradient. */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border px-5 py-2.5
+           text-sm font-medium transition-colors duration-150;
+  }
+  .btn-primary {
+    @apply btn border-accent bg-accent text-white hover:bg-[#173b48];
+  }
+  .btn-outline {
+    @apply btn border-ink/30 bg-transparent text-ink hover:border-ink hover:bg-ink/5;
+  }
+
+  .badge {
+    @apply inline-block rounded-sm border border-line bg-white px-2 py-0.5
+           font-mono text-xs tracking-tight text-slate-muted;
+  }
+
+  .section {
+    @apply mx-auto w-full max-w-content px-6 py-16 md:py-20;
+  }
+
+  .section-title {
+    @apply mb-2 text-2xl font-semibold text-ink md:text-3xl;
+  }
+
+  .section-rule {
+    @apply mb-10 h-px w-16 bg-amber-mark;
+  }
+
+  .field-label {
+    @apply mb-1 block text-sm font-medium text-ink;
+  }
+  .field-input {
+    @apply w-full rounded-sm border border-line bg-white px-3 py-2 text-sm
+           text-ink outline-none focus:border-accent;
+  }
+}
