@@ -7,6 +7,44 @@
     scroll-behavior: smooth;
   }
 
+  /* ---- Hero entrance + background motion ---- */
+  @keyframes heroFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes kenBurns {
+    from {
+      transform: scale(1.12);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .hero-anim {
+    opacity: 0;
+    animation: heroFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .hero-photo {
+    animation: kenBurns 22s ease-in-out infinite alternate;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-anim,
+    .hero-photo {
+      animation: none;
+      opacity: 1;
+    }
+  }
+
   body {
     @apply bg-paper text-ink font-body antialiased;
   }

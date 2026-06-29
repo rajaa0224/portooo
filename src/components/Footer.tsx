@@ -4,7 +4,7 @@ export default function Footer() {
   const navigate = useNavigate()
 
   return (
-    <footer className="border-t border-line bg-paper">
+    <footer id="contact" className="border-t border-line bg-paper">
       <div className="mx-auto flex max-w-content items-center justify-between px-6 py-8">
         <p className="text-sm text-slate-muted">
           © 2026 Raja Malik Chaniago.{' '}
