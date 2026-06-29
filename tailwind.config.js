@@ -20,8 +20,9 @@ export default {
         line: '#d9d4ca', // hairline borders
       },
       fontFamily: {
-        sans: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
-        body: ['system-ui', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: ['Kanit', 'system-ui', 'sans-serif'],
+        body: ['Kanit', 'system-ui', 'sans-serif'],
+        kanit: ['Kanit', 'system-ui', 'sans-serif'],
         mono: ['Consolas', 'Menlo', 'Monaco', 'monospace'],
       },
       maxWidth: {

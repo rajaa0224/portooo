@@ -3,61 +3,41 @@
 @tailwind utilities;
 
 @layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
   html {
     scroll-behavior: smooth;
   }
 
-  /* ---- Hero entrance + background motion ---- */
-  @keyframes heroFadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(18px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes kenBurns {
-    from {
-      transform: scale(1.12);
-    }
-    to {
-      transform: scale(1);
-    }
-  }
-
-  .hero-anim {
-    opacity: 0;
-    animation: heroFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  }
-
-  .hero-photo {
-    animation: kenBurns 22s ease-in-out infinite alternate;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .hero-anim,
-    .hero-photo {
-      animation: none;
-      opacity: 1;
-    }
+  html,
+  body,
+  #root {
+    margin: 0;
+    padding: 0;
+    background-color: #0c0c0c;
   }
 
   body {
-    @apply bg-paper text-ink font-body antialiased;
-  }
-
-  h1,
-  h2,
-  h3 {
-    @apply font-sans;
+    @apply text-[#D7E2EA] antialiased;
+    font-family: 'Kanit', sans-serif;
   }
 }
 
 @layer components {
-  /* Plain, sober buttons — no glow, no gradient. */
+  /* Gradient display heading used across the dark landing sections. */
+  .hero-heading {
+    background: linear-gradient(180deg, #646973 0%, #bbccd7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* ---- Light-theme helpers retained for admin / detail / project pages ---- */
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-sm border px-5 py-2.5
            text-sm font-medium transition-colors duration-150;
@@ -77,11 +57,9 @@
   .section {
     @apply mx-auto w-full max-w-content px-6 py-16 md:py-20;
   }
-
   .section-title {
     @apply mb-2 text-2xl font-semibold text-ink md:text-3xl;
   }
-
   .section-rule {
     @apply mb-10 h-px w-16 bg-amber-mark;
   }
