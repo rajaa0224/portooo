@@ -38,3 +38,21 @@ export interface Project {
 
 /** Shape used when creating/editing in the admin form (no server-managed fields). */
 export type ProjectInput = Omit<Project, 'id' | 'created_at'>
+
+export interface Certificate {
+  id: string
+  title: string
+  issuer: string
+  /** Date issued (ISO yyyy-mm-dd). */
+  issued_date: string | null
+  /** Public URL of the uploaded image or PDF. */
+  file_url: string
+  /** 'image' or 'pdf' — drives how it is previewed. */
+  file_type: 'image' | 'pdf'
+  /** Optional link to verify the credential. */
+  credential_url: string | null
+  sort_order: number
+  created_at: string
+}
+
+export type CertificateInput = Omit<Certificate, 'id' | 'created_at'>
