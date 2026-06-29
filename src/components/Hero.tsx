@@ -25,7 +25,7 @@ export default function Hero() {
       {/* Background photo — replaces the template's video. Put your photo at
           public/raja.jpg. Slow Ken Burns zoom for life. */}
       <img
-        src="/raja.jpg"
+        src="/raja.jpeg"
         alt="Raja Malik Chaniago"
         className="hero-photo absolute inset-0 h-full w-full object-cover object-[center_25%]"
         onError={(e) => {
