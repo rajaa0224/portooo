@@ -15,7 +15,7 @@ export default function CertificatesSection({
   return (
     <section
       id="certificates"
-      className="bg-[#0C0C0C] px-5 py-20 sm:px-8 md:px-10 md:py-28"
+      className="relative z-10 bg-[#0C0C0C] px-5 py-20 sm:px-8 md:px-10 md:py-28"
     >
       <FadeIn y={40}>
         <h2

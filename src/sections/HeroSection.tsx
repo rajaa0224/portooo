@@ -9,10 +9,6 @@ const NAV = [
   { label: 'Contact', href: '#contact' },
 ]
 
-// Soft elliptical fade so the photo melts into the dark background.
-const PHOTO_MASK =
-  'radial-gradient(ellipse 76% 86% at 50% 42%, #000 52%, transparent 100%)'
-
 export default function HeroSection() {
   return (
     <section
@@ -83,13 +79,9 @@ export default function HeroSection() {
           inactiveTransition="transform 0.6s ease-in-out"
         >
           <img
-            src="/raja-portrait.jpg"
+            src="/raja.png"
             alt="Raja Malik Chaniago"
-            className="w-[210px] object-cover sm:w-[260px] md:w-[320px] lg:w-[380px]"
-            style={{
-              WebkitMaskImage: PHOTO_MASK,
-              maskImage: PHOTO_MASK,
-            }}
+            className="w-[200px] object-contain drop-shadow-2xl sm:w-[240px] md:w-[280px] lg:w-[320px]"
             onError={(e) => {
               ;(e.currentTarget as HTMLImageElement).style.display = 'none'
             }}

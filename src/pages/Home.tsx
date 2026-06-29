@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import HeroSection from '../sections/HeroSection'
 import MarqueeSection from '../sections/MarqueeSection'
 import AboutSection from '../sections/AboutSection'
@@ -13,15 +14,25 @@ export default function Home() {
   const { projects, error } = useProjects()
   const { certificates } = useCertificates()
 
-  // Build the marquee strip from the user's own media.
-  const marqueeImages = Array.from(
-    new Set([
-      ...projects.flatMap((p) => [p.image_url, p.schematic_url]),
-      ...certificates
-        .filter((c) => c.file_type === 'image')
-        .map((c) => c.file_url),
-    ]),
-  ).filter((u): u is string => Boolean(u))
+  // Build the marquee from a random mix of ALL media: projects (completed +
+  // in the lab), schematics, and certificate images.
+  const marqueeImages = useMemo(() => {
+    const all = Array.from(
+      new Set([
+        ...projects.flatMap((p) => [p.image_url, p.schematic_url]),
+        ...certificates
+          .filter((c) => c.file_type === 'image')
+          .map((c) => c.file_url),
+      ]),
+    ).filter((u): u is string => Boolean(u))
+
+    // Shuffle (Fisher–Yates) so the strip is a random blend each load.
+    for (let i = all.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[all[i], all[j]] = [all[j], all[i]]
+    }
+    return all
+  }, [projects, certificates])
 
   return (
     <main id="top" className="min-h-screen bg-[#0C0C0C]" style={{ overflowX: 'clip' }}>

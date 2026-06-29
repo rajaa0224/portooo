@@ -9,7 +9,7 @@ export default function SiteFooter() {
   return (
     <footer
       id="contact"
-      className="bg-[#0C0C0C] px-5 py-24 sm:px-8 md:px-10 md:py-32"
+      className="relative z-10 bg-[#0C0C0C] px-5 py-24 sm:px-8 md:px-10 md:py-32"
     >
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-8 text-center">
         <FadeIn y={40}>

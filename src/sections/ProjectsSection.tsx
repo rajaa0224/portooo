@@ -17,7 +17,7 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
   return (
     <section
       id="projects"
-      className="relative z-10 -mt-10 rounded-t-[40px] bg-[#0C0C0C] sm:-mt-12 sm:rounded-t-[50px] md:-mt-14 md:rounded-t-[60px]"
+      className="relative -mt-10 rounded-t-[40px] bg-[#0C0C0C] sm:-mt-12 sm:rounded-t-[50px] md:-mt-14 md:rounded-t-[60px]"
     >
       <div className="px-5 pt-20 sm:px-8 md:px-10">
         <FadeIn y={40}>

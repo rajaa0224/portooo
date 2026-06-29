@@ -8,7 +8,7 @@ export default function LabSection({ projects }: { projects: Project[] }) {
   if (wip.length === 0) return null
 
   return (
-    <section id="lab" className="bg-[#0C0C0C] px-5 py-20 sm:px-8 md:px-10 md:py-28">
+    <section id="lab" className="relative z-10 bg-[#0C0C0C] px-5 py-20 sm:px-8 md:px-10 md:py-28">
       <FadeIn y={40}>
         <h2
           className="hero-heading mb-12 text-center font-black uppercase leading-none tracking-tight md:mb-20"

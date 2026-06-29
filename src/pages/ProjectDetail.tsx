@@ -38,7 +38,7 @@ export default function ProjectDetail() {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center font-mono text-sm text-slate-muted">
+      <div className="flex min-h-screen items-center justify-center bg-paper font-mono text-sm text-slate-muted">
         Loading…
       </div>
     )
@@ -46,7 +46,7 @@ export default function ProjectDetail() {
 
   if (notFound || !project) {
     return (
-      <div className="mx-auto flex min-h-screen max-w-content flex-col items-start gap-4 px-6 py-20">
+      <div className="flex min-h-screen flex-col items-start gap-4 bg-paper px-6 py-20 mx-auto max-w-content">
         <p className="text-lg text-ink">Project not found.</p>
         <Link to="/" className="btn-outline">
           <ArrowLeft size={16} /> Back to home
@@ -56,7 +56,7 @@ export default function ProjectDetail() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-paper">
       <div className="border-b border-line bg-white">
         <div className="mx-auto max-w-content px-6 py-8">
           <Link
