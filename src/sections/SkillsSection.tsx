@@ -30,11 +30,11 @@ const SKILLS = [
 
 export default function SkillsSection() {
   return (
-    <section className="rounded-t-[40px] bg-white px-5 py-20 sm:rounded-t-[50px] sm:px-8 sm:py-24 md:rounded-t-[60px] md:px-10 md:py-32">
+    <section className="rounded-t-[40px] bg-white px-5 py-16 sm:rounded-t-[50px] sm:px-8 sm:py-20 md:rounded-t-[60px] md:px-10 md:py-24">
       <FadeIn y={40}>
         <h2
-          className="mb-16 text-center font-black uppercase text-[#0C0C0C] sm:mb-20 md:mb-28"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
+          className="mb-12 text-center font-black uppercase text-[#0C0C0C] sm:mb-16 md:mb-20"
+          style={{ fontSize: 'clamp(2rem, 6.5vw, 76px)' }}
         >
           Skills
         </h2>
@@ -49,7 +49,7 @@ export default function SkillsSection() {
             >
               <span
                 className="shrink-0 font-black leading-none text-[#0C0C0C]"
-                style={{ fontSize: 'clamp(3rem, 10vw, 140px)' }}
+                style={{ fontSize: 'clamp(2rem, 5.5vw, 72px)' }}
               >
                 {s.no}
               </span>

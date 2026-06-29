@@ -34,7 +34,7 @@ export default function MarqueeSection({ images }: { images: string[] }) {
   return (
     <section
       ref={ref}
-      className="bg-[#0C0C0C] pb-10 pt-24 sm:pt-32 md:pt-40"
+      className="bg-[#0C0C0C] pb-8 pt-14 sm:pt-20 md:pt-24"
       style={{ overflowX: 'clip' }}
     >
       <div className="flex flex-col gap-3">
@@ -57,7 +57,7 @@ function Row({ images, x }: { images: string[]; x: number }) {
           src={src}
           alt=""
           loading="lazy"
-          className="h-[270px] w-[420px] shrink-0 rounded-2xl object-cover"
+          className="h-[180px] w-[290px] shrink-0 rounded-2xl object-cover sm:h-[200px] sm:w-[320px]"
         />
       ))}
     </div>

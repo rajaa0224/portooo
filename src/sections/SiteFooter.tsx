@@ -15,7 +15,7 @@ export default function SiteFooter() {
         <FadeIn y={40}>
           <h2
             className="hero-heading font-black uppercase leading-none tracking-tight"
-            style={{ fontSize: 'clamp(2.5rem, 10vw, 130px)' }}
+            style={{ fontSize: 'clamp(1.75rem, 6vw, 68px)' }}
           >
             Let&apos;s talk
           </h2>

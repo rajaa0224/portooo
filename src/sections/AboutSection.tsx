@@ -10,7 +10,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative flex min-h-screen flex-col items-center justify-center px-5 py-20 sm:px-8 md:px-10"
+      className="relative flex min-h-[78vh] flex-col items-center justify-center px-5 py-16 sm:px-8 md:px-10 md:py-24"
       style={{ overflowX: 'clip' }}
     >
       {/* Decorative floating tech icons in the corners */}
@@ -51,7 +51,7 @@ export default function AboutSection() {
         <FadeIn y={40} delay={0}>
           <h2
             className="hero-heading text-center font-black uppercase leading-none tracking-tight"
-            style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
+            style={{ fontSize: 'clamp(2rem, 6.5vw, 76px)' }}
           >
             About me
           </h2>

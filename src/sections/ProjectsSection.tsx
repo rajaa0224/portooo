@@ -22,7 +22,7 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
       <div className="px-5 pt-20 sm:px-8 md:px-10">
         <FadeIn y={40}>
           <h2 className="hero-heading text-center font-black uppercase leading-none tracking-tight"
-            style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
+            style={{ fontSize: 'clamp(2rem, 6.5vw, 76px)' }}
           >
             Project
           </h2>
@@ -77,16 +77,16 @@ function Card({
   const imgTall = project.image_url ?? project.schematic_url
 
   return (
-    <div className="sticky top-24 flex h-[85vh] items-start justify-center md:top-32">
+    <div className="sticky top-20 flex h-[72vh] items-start justify-center md:top-24">
       <motion.div
-        style={{ scale, top: index * 28 }}
-        className="relative w-full max-w-5xl rounded-[40px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:rounded-[50px] sm:p-6 md:rounded-[60px] md:p-8"
+        style={{ scale, top: index * 24 }}
+        className="relative w-full max-w-4xl rounded-[32px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:rounded-[40px] sm:p-5 md:rounded-[48px] md:p-7"
       >
         {/* Top row */}
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3 sm:mb-6 md:mb-8">
           <div className="flex items-center gap-4">
             <span className="font-black leading-none text-[#D7E2EA]"
-              style={{ fontSize: 'clamp(2.5rem, 8vw, 110px)' }}
+              style={{ fontSize: 'clamp(1.75rem, 5vw, 60px)' }}
             >
               {number}
             </span>

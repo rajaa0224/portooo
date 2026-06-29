@@ -20,7 +20,7 @@ export default function CertificatesSection({
       <FadeIn y={40}>
         <h2
           className="hero-heading mb-12 text-center font-black uppercase leading-none tracking-tight md:mb-20"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
+          style={{ fontSize: 'clamp(2rem, 6.5vw, 76px)' }}
         >
           Certificates
         </h2>
