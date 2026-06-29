@@ -33,9 +33,9 @@ export default function Hero() {
           ;(e.currentTarget as HTMLImageElement).style.display = 'none'
         }}
       />
-      {/* Light scrim so the bottom-left text stays readable over the photo. */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#f0f0ee] via-[#f0f0ee]/55 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#f0f0ee]/80 via-transparent to-transparent" />
+      {/* Subtle scrim — only along the bottom so the text stays readable while
+          the photo itself stays clearly visible. */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#f0f0ee]/85 via-[#f0f0ee]/10 to-transparent" />
 
       {/* Foreground */}
       <div className="relative z-10 flex min-h-screen flex-col">
