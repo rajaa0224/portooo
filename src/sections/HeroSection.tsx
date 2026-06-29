@@ -4,6 +4,7 @@ import ContactButton from '../components/ui/ContactButton'
 
 const NAV = [
   { label: 'About', href: '#about' },
+  { label: 'Education', href: '#education' },
   { label: 'Projects', href: '#projects' },
   { label: 'Certificates', href: '#certificates' },
   { label: 'Contact', href: '#contact' },
@@ -66,24 +67,24 @@ export default function HeroSection() {
         </FadeIn>
       </div>
 
-      {/* Magnetic portrait — cropped + edge-faded so it blends in */}
+      {/* Decorative magnetic orb (replaces the portrait — cleaner on mobile) */}
       <FadeIn
         y={30}
         delay={0.6}
-        className="pointer-events-none absolute left-1/2 top-[52%] z-0 -translate-x-1/2 -translate-y-1/2 sm:bottom-0 sm:top-auto sm:translate-y-0"
+        className="pointer-events-none absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2"
       >
         <Magnet
-          padding={140}
-          strength={4}
+          padding={160}
+          strength={5}
           activeTransition="transform 0.3s ease-out"
           inactiveTransition="transform 0.6s ease-in-out"
         >
-          <img
-            src="/raja.png"
-            alt="Raja Malik Chaniago"
-            className="w-[200px] object-contain drop-shadow-2xl sm:w-[240px] md:w-[280px] lg:w-[320px]"
-            onError={(e) => {
-              ;(e.currentTarget as HTMLImageElement).style.display = 'none'
+          <div
+            className="floaty h-[200px] w-[200px] rounded-full sm:h-[280px] sm:w-[280px] md:h-[360px] md:w-[360px]"
+            style={{
+              background:
+                'radial-gradient(circle at 35% 30%, #BE4C00 0%, #B600A8 38%, #7621B0 68%, #18011F 100%)',
+              boxShadow: '0 0 120px 24px rgba(118, 33, 176, 0.45)',
             }}
           />
         </Magnet>

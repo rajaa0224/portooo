@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import HeroSection from '../sections/HeroSection'
 import MarqueeSection from '../sections/MarqueeSection'
 import AboutSection from '../sections/AboutSection'
+import EducationSection from '../sections/EducationSection'
 import SkillsSection from '../sections/SkillsSection'
 import ProjectsSection from '../sections/ProjectsSection'
 import LabSection from '../sections/LabSection'
@@ -39,6 +40,7 @@ export default function Home() {
       <HeroSection />
       <MarqueeSection images={marqueeImages} />
       <AboutSection />
+      <EducationSection />
       <SkillsSection />
       <ProjectsSection projects={projects} />
       <LabSection projects={projects} />

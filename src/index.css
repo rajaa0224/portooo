@@ -28,6 +28,20 @@
 }
 
 @layer components {
+  /* Gentle floating motion for the hero's decorative orb. */
+  @keyframes floaty {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-18px);
+    }
+  }
+  .floaty {
+    animation: floaty 6s ease-in-out infinite;
+  }
+
   /* Gradient display heading used across the dark landing sections. */
   .hero-heading {
     background: linear-gradient(180deg, #9aa6b2 0%, #e7eef3 100%);
