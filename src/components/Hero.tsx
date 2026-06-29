@@ -30,7 +30,7 @@ export default function Hero() {
 
           <div className="flex items-center gap-2">
             <a
-              href="https://github.com/"
+              href="https://github.com/rajaa0224"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
@@ -39,7 +39,7 @@ export default function Hero() {
               <GithubIcon size={18} />
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/raja-malik-chaniago-0943352b0"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
